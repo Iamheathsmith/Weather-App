@@ -47,6 +47,15 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractPlugin.extract(['css-loader', 'sass-loader']),
       },
+      {
+        test: /\.(png|jpg|svg|jpeg)$/i,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: 'image/[name].[hash].[ext]',
+          },
+        }],
+      },
     ],
   },
 };

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700|Sigmar+One');
+
+.input-city {
+  padding-bottom: 20px;
+  width: 350px;
+}
+
+input[type=text] {
+  height: 25px;
+  width: 160px;
+  border: none;
+  font-size: 18px;
+  margin-right: 5px;
+  box-shadow: 1px 1px 5px 1px grey;
+}
+
+.go-btn {
+  font-family: 'Sigmar One', cursive;
+  margin-top: 10px;
+  float: right;
+  margin-right: 20px;
+}

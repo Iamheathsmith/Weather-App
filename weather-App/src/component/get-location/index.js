@@ -1,5 +1,5 @@
 import React from 'react';
-// import './add-user-form.scss';
+import './input-area.scss';
 
 class GetLocation extends React.Component {
   constructor(props) {
@@ -29,14 +29,15 @@ class GetLocation extends React.Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <form
-          className="lowfare-form generic-form"
+          className="input-city"
           onSubmit={this.handleSubmit}
           noValidate>
 
           <input
             type="text"
+            autoComplete="off"
             name="city"
             placeholder="City"
             value={this.state.city}
@@ -44,14 +45,15 @@ class GetLocation extends React.Component {
 
           <input
             type="text"
+            autoComplete="off"
             name="state"
             placeholder="State"
             value={this.state.state}
             onChange={this.handleChange}/>
 
-          <button className="lowfare-btn" type="submit">Add User</button>
+          <button className="go-btn" type="submit">Get Weather</button>
         </form>
-      </div>
+      </React.Fragment>
     );
   }
 }
