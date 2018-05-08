@@ -1,5 +1,5 @@
 
-// import './content.scss';
+import './content.scss';
 import React from 'react';
 import {connect} from 'react-redux';
 import DayForcast from '../day-weather/index';
@@ -21,7 +21,7 @@ class Content extends React.Component {
 
         <div className="location">
           {this.props.location.length === 1 ?
-            <h1>{this.props.location[0].city}, {this.props.location[0].state}</h1>
+            <h1 className="location-name">{this.props.location[0].city}, {this.props.location[0].state}</h1>
             :
             undefined
           }
