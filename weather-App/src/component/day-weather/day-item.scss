@@ -1,0 +1,21 @@
+.day-item {
+  outline: 1px solid black;
+  display: inline-block;
+  float: left;
+  width: 260px;
+  height: 300px;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+
+@media screen and (max-width: 540px) {
+  .lowfare-form {
+    margin-top: 16vw !important;
+    width: 80% !important;
+  }
+
+  .lowfare-form input[type=text], .lowfare-form input[type=number], .lowfare-form input[type=date] {
+    font-size: 1.9vw;
+  }
+}
