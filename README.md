@@ -6,7 +6,7 @@
 </p>
 
 
-### [Link to live site hosted on GithubPages](https://gtfo-frontend.herokuapp.com/)
+### [Link to live site hosted on Heroku.com](https://weather-for-you-app.herokuapp.com/)
 
 ## Overview
 Weather for you is a basic React app that is built with Redux. We use the [Weather Underground API](https://www.wunderground.com/weather/api/) and get the weather for a city with either a state or county code such as "Seattle, WA" or "Paris, FR".  We give you a 3 day weather forcast along with a AM and PM of each day posted above the day main forcast.
