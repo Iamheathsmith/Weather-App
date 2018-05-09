@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700|Sigmar+One');
+
+.input-city {
+  padding-bottom: 20px;
+  width: 350px;
+}
+
+input[type=text] {
+  height: 25px;
+  text-transform: uppercase;
+  width: 160px;
+  font-size: 14px;
+  margin-right: 5px;
+  box-shadow: 1px 1px 5px 1px grey;
+}
+
+input[type=text]:valid {
+  outline-color: green;
+}
+
+.go-btn {
+  font-size: 13px;
+  font-family: 'Sigmar One', cursive;
+  margin-top: 10px;
+  float: right;
+  height: 30px;
+  outline: none;
+  width: 120px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.go-btn-before {
+  font-size: 13px;
+  font-family: 'Sigmar One', cursive;
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  border-radius: 3px;
+  outline: none;
+  width: 120px;
+  float: none;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .go-btn{
+    font-size: 13px;
+    font-family: 'Sigmar One', cursive;
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+    border-radius: 3px;
+    outline: none;
+    width: 120px;
+    float: none;
+    margin-top: 10px;
+  }
+}

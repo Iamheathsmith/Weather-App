@@ -1,5 +1,6 @@
 import React from 'react';
-// import './add-user-form.scss';
+import './input-area.scss';
+import {connect} from 'react-redux';
 
 class GetLocation extends React.Component {
   constructor(props) {
@@ -19,6 +20,14 @@ class GetLocation extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    if (this.state.state === '') {
+      alert('need to have state/county code');
+      return;
+    }
+    if (this.state.city === '') {
+      alert('need to have city to search');
+      return;
+    }
     this.props.onComplete(this.state)
       .then(() => this.setState({
         city: '',
@@ -29,14 +38,16 @@ class GetLocation extends React.Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <form
-          className="lowfare-form generic-form"
+          className="input-city"
           onSubmit={this.handleSubmit}
           noValidate>
 
           <input
             type="text"
+            pattern="[a-zA-Z]{1,16}" required
+            autoComplete="off"
             name="city"
             placeholder="City"
             value={this.state.city}
@@ -44,16 +55,24 @@ class GetLocation extends React.Component {
 
           <input
             type="text"
+            maxLength="2"
+            pattern="^[a-zA-Z]{2}$" required
+            autoComplete="off"
             name="state"
-            placeholder="State"
+            placeholder="State/County Code"
             value={this.state.state}
             onChange={this.handleChange}/>
 
-          <button className="lowfare-btn" type="submit">Add User</button>
+          <button className={this.props.location.length === 1 ? 'go-btn' : 'go-btn-before'}type="submit">Get Weather</button>
         </form>
-      </div>
+      </React.Fragment>
     );
   }
 }
 
-export default GetLocation;
+let mapStateToProps = state => ({
+  location: state.location,
+  city: state.city,
+});
+
+export default connect(mapStateToProps, null)(GetLocation);

@@ -1,21 +1,106 @@
 .day-item {
-  outline: 1px solid black;
+  margin-top: 20px;
+  background-color: #f8fbff;
+  box-shadow: 1px 1px 5px 1px grey;
+  border-radius: 3px;
+  border: 1px solid black;
   display: inline-block;
-  float: left;
-  width: 260px;
-  height: 300px;
+  flex: 0 0 auto;
+  width: 200px;
+  height: 260px;;
   padding: 10px;
   margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 
-@media screen and (max-width: 540px) {
-  .lowfare-form {
-    margin-top: 16vw !important;
-    width: 80% !important;
-  }
+.high {
+  display: inline-block;
+  color: red;
+}
 
-  .lowfare-form input[type=text], .lowfare-form input[type=number], .lowfare-form input[type=date] {
-    font-size: 1.9vw;
-  }
+.wind {
+  font-size: 12px;
+  margin-top: 3px;
+  display: inline-block;
+  float: right;
+}
+
+.low {
+  display: inline-block;
+  color: blue;
+}
+
+.temps {
+  display: inline-block;
+  font-size: 24px;
+  float: right;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+.image {
+  display: inline-block;
+  width: 60px;
+  margin-left: 10px;
+}
+
+.saying {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: inherit;
+}
+
+.humidity {
+  text-decoration: underline;
+  display: inline-block;
+  float: right;
+  margin-top: -30px;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.rain-holder {
+  height: 20px;
+  border: 1px solid;
+  border-radius: 1px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+.rain-total {
+  display: inline-block;
+  font-size: 10px;
+  float: left;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.day-day {
+  font-family: 'Amatic SC', cursive;
+  font-size: 22px;
+}
+
+.rain-morning {
+  display: inline-block;
+  font-size: 10px;
+  float: right;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+section {
+  background-color: #cedfff;
+  border: 1px solid;
+  padding: 5px;
+  height: 95px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.conditions {
+  display: inline-block;
+  font-size: 12px;
+  float: left;
+  margin-top: 4px;
 }
