@@ -27,13 +27,20 @@ header {
 
 .week-forcast {
   width: 90%;
-  display: block;
+  display: flex;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .input-area {
   float: right;
   margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.start-area {
+  margin: 0 auto;
+  width: 300px;
 }
 
 @media screen and (max-width: 1140px) {
@@ -41,5 +48,6 @@ header {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    justify-content: right;
   }
 }

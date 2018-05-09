@@ -15,7 +15,7 @@ class Content extends React.Component {
         <header>Find your Weather 2.0</header>
 
         <div className="name-search">
-          <div className="input-area">
+          <div className={this.props.location.length === 1 ? 'input-area' : 'start-area'}>
             <GetLocation
               onComplete={this.props.addLocation}
             />
@@ -36,11 +36,11 @@ class Content extends React.Component {
         <div className="week-forcast">
           {this.props.location.length === 1 ?
             this.props.location[0].txt_forecast.forecastday.map((item, idx) =>
-              <div className="week-obj" key={idx}>
+              <React.Fragment key={idx}>
                 <WeekForcast
                   weekItem={item}
                 />
-              </div>)
+              </React.Fragment>)
             :
             undefined
           }
