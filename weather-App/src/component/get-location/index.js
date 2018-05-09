@@ -22,11 +22,11 @@ class GetLocation extends React.Component {
     e.preventDefault();
     if (this.state.state === '') {
       alert('need to have state/county code');
-      return false;
+      return;
     }
     if (this.state.city === '') {
       alert('need to have city to search');
-      return false;
+      return;
     }
     this.props.onComplete(this.state)
       .then(() => this.setState({
@@ -72,8 +72,7 @@ class GetLocation extends React.Component {
 
 let mapStateToProps = state => ({
   location: state.location,
+  city: state.city,
 });
-
-// export default GetLocation;
 
 export default connect(mapStateToProps, null)(GetLocation);
