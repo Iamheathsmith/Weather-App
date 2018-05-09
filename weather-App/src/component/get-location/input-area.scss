@@ -42,3 +42,18 @@ input[type=text]:valid {
   float: none;
   margin-top: 10px;
 }
+
+@media screen and (max-width: 640px) {
+  .go-btn{
+    font-size: 13px;
+    font-family: 'Sigmar One', cursive;
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+    border-radius: 3px;
+    outline: none;
+    width: 120px;
+    float: none;
+    margin-top: 10px;
+  }
+}
