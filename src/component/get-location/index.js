@@ -59,7 +59,7 @@ class GetLocation extends React.Component {
             pattern="^[a-zA-Z]{2}$" required
             autoComplete="off"
             name="state"
-            placeholder="State/County Code"
+            placeholder="State/Country code"
             value={this.state.state}
             onChange={this.handleChange}/>
 
